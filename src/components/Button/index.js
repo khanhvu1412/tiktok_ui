@@ -19,7 +19,7 @@ function Button({
     leftIcon,
     rightIcon,
     onClick,
-    passProps,
+    ...passProps
 }) {
     let Comp = 'button';
     const props = {
