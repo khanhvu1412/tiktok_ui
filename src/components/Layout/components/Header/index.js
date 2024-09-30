@@ -24,7 +24,7 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
-import { MessageIcon, InboxIcon, UploadIcon } from '~/components/Icons';
+import { MessageIcon, InboxIcon, UploadIcon, SearchIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
@@ -135,7 +135,7 @@ function Header() {
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
 
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -156,6 +156,7 @@ function Header() {
                             <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
                                     <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </>
