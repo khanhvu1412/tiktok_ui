@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleQuestion,
     faCircleXmark,
-    faCloudArrowUp,
     faCoins,
     faEarthAsia,
     faEllipsisVertical,
@@ -25,6 +24,8 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import { MessageIcon, InboxIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -102,8 +103,8 @@ function Header() {
             icon: <FontAwesomeIcon icon={faSignOut} />,
             title: 'Log out',
             to: '/logout',
-            separate: true
-        }
+            separate: true,
+        },
     ];
 
     return (
@@ -144,7 +145,17 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudArrowUp} />
+                                    <UploadIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content="Message" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -156,9 +167,9 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                src="https://p9-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/d21919c71bab1fe7cb474005a517637a~c5_300x300.webp?lk3s=a5d48078&nonce=8633&refresh_token=af13a464e48396f5115c0d972304c029&x-expires=1727341200&x-signature=8n%2FHNxNPC5IBPLUAjILCJZ%2Fz%2Fm0%3D&shp=a5d48078&shcp=c1333099"
+                                src="shttps://p9-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/d21919c71bab1fe7cb474005a517637a~c5_300x300.webp?lk3s=a5d48078&nonce=8633&refresh_token=af13a464e48396f5115c0d972304c029&x-expires=1727341200&x-signature=8n%2FHNxNPC5IBPLUAjILCJZ%2Fz%2Fm0%3D&shp=a5d48078&shcp=c1333099"
                                 alt="Nguyễn Văn A"
                             />
                         ) : (
