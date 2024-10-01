@@ -11,7 +11,7 @@ import styles from './Search.module.scss';
 const cx = classNames.bind(styles);
 
 function Search() {
-    const [searchValue, setSearchvalue] = useState('');
+    const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
     const [showResult, setShowResult] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -35,10 +35,10 @@ function Search() {
             .catch(() => {
                 setLoading(false);
             });
-    }, [searchvalue]);
+    }, [searchValue]);
 
     const handleClear = () => {
-        setSearchvalue('');
+        setSearchValue('');
         setSearchResult([]);
         inputRef.current.focus();
     };
