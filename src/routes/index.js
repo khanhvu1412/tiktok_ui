@@ -8,17 +8,15 @@ import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
 
-
 // import { Component } from 'react';
 
 // Public routes
 const publicRoutes = [
     { path: '/', component: Home },
     { path: '/following', component: Following },
-    { path: '/profile', component: Profile },
+    { path: '/:nickname', component: Profile }, // Trên video là { path: '/@:nickname', component: Profile } nhưng ko đc
     { path: '/upload', component: Upload, layout: HeaderOnly },
-    { path: '/search', component: Search, layout: null},
-
+    { path: '/search', component: Search, layout: null },
 ];
 
 const privateRoutes = [];

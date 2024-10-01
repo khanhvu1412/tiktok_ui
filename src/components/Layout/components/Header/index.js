@@ -17,7 +17,7 @@ import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
-import { MessageIcon, InboxIcon, UploadIcon} from '~/components/Icons';
+import { MessageIcon, InboxIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
 
@@ -55,11 +55,7 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
-    
-
     const currentUser = true;
-
-    
 
     // Handle logic
     const handleMenuChange = (menuItem) => {
@@ -103,7 +99,7 @@ function Header() {
                 <img src={images.logo} alt="Tiktok" />
 
                 {/* Search */}
-                <Search/>
+                <Search />
 
                 <div className={cx('actions')}>
                     {currentUser ? (
@@ -135,7 +131,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="shttps://p9-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/d21919c71bab1fe7cb474005a517637a~c5_300x300.webp?lk3s=a5d48078&nonce=8633&refresh_token=af13a464e48396f5115c0d972304c029&x-expires=1727341200&x-signature=8n%2FHNxNPC5IBPLUAjILCJZ%2Fz%2Fm0%3D&shp=a5d48078&shcp=c1333099"
+                                src="https://p9-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/d21919c71bab1fe7cb474005a517637a~c5_300x300.webp?lk3s=a5d48078&nonce=8633&refresh_token=af13a464e48396f5115c0d972304c029&x-expires=1727341200&x-signature=8n%2FHNxNPC5IBPLUAjILCJZ%2Fz%2Fm0%3D&shp=a5d48078&shcp=c1333099"
                                 alt="Nguyễn Văn A"
                             />
                         ) : (
